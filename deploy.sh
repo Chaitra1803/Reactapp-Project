@@ -6,28 +6,28 @@ if [[ $GIT_BRANCH == "origin/dev" ]]; then
     ./build.sh
 
     # Log in to Docker Hub (replace with your actual Docker Hub credentials)
-    docker login -u sayeda77 -p dckr_pat_VPY-9NwBDEwI0PpfGcF3l8ujH28
+    docker login -u veera1808 -p dckr_pat_C7FMRRRiGBfoZvetq6DDyyYf8OU
 
   
     # Tag the image
-    docker tag react-appimg sayeda77/dev
+    docker tag react-appimg veera1808/dev_repo
 
     # Push the image to the Dev Docker Hub repository
-    docker push sayeda77/dev
+    docker push veera1808/dev_repo
 
 elif [[ $GIT_BRANCH == "origin/main" ]]; then
     # Build your project
     ./build.sh
 
     # Log in to Docker Hub (replace with your actual Docker Hub credentials)
-    docker login -u sayeda77 -p dckr_pat_VPY-9NwBDEwI0PpfGcF3l8ujH28
+    docker login -u veera1808 -p dckr_pat_C7FMRRRiGBfoZvetq6DDyyYf8OU
 
    
     # Tag the image
-    docker tag react-appimg sayeda77/prod 
+    docker tag react-appimg veera1808/prod_repo 
 
     # Push the image to the Prod Docker Hub repository
-    docker push sayeda77/prod
+    docker push veera1808/prod_repo
 else
     echo "Deployment error"
 fi
