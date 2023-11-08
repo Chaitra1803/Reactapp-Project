@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                git branch: 'main',
-               url: 'https://github.com/sayeda-77/Reactapp-Project.git'
+               url: 'https://github.com/Chaitra1803/Reactapp-Project.git'
             }
         }
 
