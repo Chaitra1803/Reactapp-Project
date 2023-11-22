@@ -1,6 +1,11 @@
 pipeline {
     agent any
-
+ stages {
+        stage('cleaning the os') {
+            steps {
+                sh 'docker rm -f $(docker ps -aq)' 
+            }
+        }
     stages {
         stage('Checkout') {
             steps {
